@@ -4,13 +4,9 @@ import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.TokenWatcher
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.MediaController
 import android.widget.TextView
-import android.widget.Toast
 import com.example.musicplayer.R
 
 class PlaySongs : AppCompatActivity() {
@@ -25,10 +21,10 @@ companion object PlaySong {
         setContentView(R.layout.activity_play_songs)
 
         var intent = intent
-        var name_of_song:TextView = findViewById(R.id.tv_name_of_song)
+        var name_of_song:TextView = findViewById(R.id.song_name)
         name_of_song.text = intent.getStringExtra("name_of_song")
 
-        var play_or_pause_button:ImageView = findViewById(R.id.iv_play_or_pause_song)
+        var play_or_pause_button:ImageView = findViewById(R.id.play_or_pause_song)
 
         start_song()
 
